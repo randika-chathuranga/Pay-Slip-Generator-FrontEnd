@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+body{
+    font-family: 'Inter';
+    font-style: normal;
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin common_display_style {
+    font-family: 'Inter';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin main_card_additional {
+    border-radius: 10px;
+    margin-left: 57px;
+    margin-top: 20px;
+}
+
+@mixin card_title {
+    height: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #004DCC;
+    font-family: 'Inter';
+    font-style: normal;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin warning {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    color: #828A9C;
+    margin: 20px auto;
+    position: relative;
+}
+
+@mixin login {
+    height: 38px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media screen and (max-width:425px){
+    .mat-typography{
+        width: 100vw;
+        height: 100vh;
+    }
+}

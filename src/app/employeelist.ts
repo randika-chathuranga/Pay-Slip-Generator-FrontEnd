@@ -1,0 +1,20 @@
+export interface EmployeeList{
+    eid: string,
+    ename: string,
+    address: string,
+    basicsalry: string,
+    designation: string,
+    email: string,
+    status: string,
+    department: string,
+    nameOfBank: string,
+    branch: string,
+    userRole: string,
+    accountNo: string,
+    password: string,
+    joinedDate: Date,
+    nic: string,
+    casualLeave: number,
+    annualLeave: number,
+    studyLeave: number
+}
