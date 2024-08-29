@@ -1,0 +1,37 @@
+
+.template-title{
+  margin-left: 20px;
+}
+
+.template-sample{
+  margin-left: 20px;
+}
+
+.template-image{
+  height: 145px;
+  border: 1px solid black;
+}
+
+.update-details{
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.card-body{
+  height: 250px;
+}
+
+.button-row{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  button{
+      height: 40px;
+      width: 125px;
+
+  }
+}
+
+mat-nav-list a{
+  padding: 0px 50px;
+}
