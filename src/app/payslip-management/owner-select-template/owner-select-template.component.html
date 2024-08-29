@@ -1,0 +1,48 @@
+
+<app-navbar></app-navbar>
+
+<!-- sidenavbar -->
+  <mat-sidenav-container style="height: 800px;">
+      <mat-sidenav #sidenav opened="true" mode="side" style="width: 280px; background-color: #fff; border: none;">
+          <mat-nav-list class="pt-0" style="background-color: #fff;">
+              <a href="" mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</a>
+              <a href="" mat-list-item><mat-icon>perm_identity</mat-icon>Employee</a>
+              <a href="" mat-list-item><mat-icon>account_balance_wallet</mat-icon>Payslips</a>
+              <a href="" mat-list-item><mat-icon>extension</mat-icon>Create Template</a>
+              <a href="" mat-list-item><mat-icon>perm_identity</mat-icon>Profile</a>
+              <a href="" mat-list-item><mat-icon>settings</mat-icon>Setting</a>
+              <a href="" mat-list-item><mat-icon>help</mat-icon>help</a>
+          </mat-nav-list>
+      </mat-sidenav>
+      <!-- Body -->
+      <mat-sidenav-content>
+        <div class="row template-title">
+            <h1>Template</h1>
+        </div>
+        <div class="row template-sample">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        +Create New Template
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6"  *ngFor="let details of templateDetails">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="template-image">
+                            <img src="../../../assets/images/template-image.svg" style="width: 242px; height:143px" alt="">
+                        </div>
+                        <div class="update-details">
+                            last updated by <span>{{details.time}}</span>
+                        </div>
+                        <div class="button-row">
+                            <button type="button" class="btn btn-light">Preview</button>
+                            <button type="button" class="btn btn-primary">Select</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
