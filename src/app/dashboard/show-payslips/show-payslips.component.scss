@@ -1,0 +1,250 @@
+@import "../../../button.scss";
+
+$background:#FAFAFC;;
+$preview-btn: #4300B1;
+$print-btn: #fff;
+$download-btn: #2196F3;
+$create_temp: #000;
+$add-emp: #2196F3;
+
+*{
+    background-color: $background;
+    a{
+        text-decoration: none;
+    }
+
+    border: none;
+}
+
+
+.card-body{
+    padding-top: 0px;
+    background-color: $print-btn;
+}
+.card-title{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: $print-btn;
+
+    span{
+        margin-left: 145px;
+        background-color: $print-btn;
+    }
+}
+
+.card-text{
+    font-weight: 500;
+    font-size: 32px;
+    display: flex;
+    background-color: $print-btn;
+}
+
+.mypayslip, .new_employees{
+    background-color: $print-btn;
+
+}
+
+.search-year{
+    display: flex;
+    width: 85%;
+    justify-content: end;
+
+    background-color: $print-btn;
+
+    .search{
+        width: 140px;
+        background-color: $print-btn;
+    }
+    .year{
+        width: 80px;
+        background-color: $print-btn;
+
+    }
+}
+
+.search-bar{
+    height: 30px;
+    margin-top: 10px;
+    background-color: $print-btn;
+
+}
+
+tr,tbody{
+    background-color: $print-btn;
+
+}
+td{
+    color:  #828A9C;;
+}
+
+a{
+    background-color: $print-btn;
+}
+
+.search-box{
+    height: 20px;
+}
+
+.input-group-text{
+    padding: 2px;
+    height: 20px;
+    background-color: $print-btn;
+}
+
+.search-input{
+    height: 20px;
+    background-color: $print-btn;
+}
+
+.btn-color-preview{
+    background-color: $preview-btn;
+}
+
+.btn-color-print{
+    background-color: $print-btn;
+}
+.btn-color-download{
+    background-color: $download-btn;
+}
+
+.new_employees{
+    font-weight: bold;
+    padding: 20px 0px;
+    display: flex;
+    padding-left: 20px;
+}
+
+
+//swich button
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 6px;
+    left: 9px;
+    right: 1px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  //3rd column related styles
+  .btn-create-template{
+    color: $create_temp;
+    background-color: $print-btn;
+    @include create_btn();
+  }
+
+  .btn-add-employee{
+    color: $print-btn;
+    background-color: $add-emp;
+    @include create_btn();
+  }
+
+  .demo-inline-calendar-card {
+    width: 233px;
+    background-color: $print-btn;
+  }
+
+  .calander_body{
+    background-color: $print-btn;
+  }
+
+  .today_events{
+    background-color: $print-btn;
+    h4, p{
+      background-color: $print-btn;
+      padding-left: 16px;
+    }
+  }
+
+  .mat-toolbar-row{
+    height: 55px;
+  }
+
+  mat-nav-list a{
+    display: flex;
+    padding-left: 50px;
+  }
+
+  .mat-nav-list{
+    margin-top: 10px;
+  }
+
+  .mat-toolbar-row{
+    background-color: $print-btn;
+  }
+
+  .mat-icon{
+    margin-right: 20px;
+  }
+
+  //main nav bar
+  .magnifire, .help, .notification, .logout{
+    button{
+      background-color: $print-btn;
+      padding-bottom: 0px;
+      height: 42px;
+    }
+    mat-icon{
+      background-color: $print-btn;
+    }
+  }
+
+  .nav-item{
+
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+    margin-left: 1100px;
+  }

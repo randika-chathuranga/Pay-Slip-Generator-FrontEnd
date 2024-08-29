@@ -1,0 +1,162 @@
+<app-navbar></app-navbar>
+
+<!-- sidenavbar -->
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav opened="true" mode="side" style="width: 280px; background-color: #fff; border: none;">
+          <mat-nav-list class="pt-0" style="background-color: #fff;">
+              <a href="/dashboard" mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</a>
+              <!-- <a href="" mat-list-item><mat-icon>perm_identity</mat-icon>Employee</a> -->
+              <a href="/emp-request" mat-list-item><mat-icon>account_balance_wallet</mat-icon>Create Request</a>
+              <!-- <a href="" mat-list-item><mat-icon>extension</mat-icon>Create Template</a>  -->
+              <a href="/dashboard" mat-list-item><mat-icon>perm_identity</mat-icon>Profile</a>
+              <a href="/dashboard" mat-list-item><mat-icon>settings</mat-icon>Setting</a>
+              <a href="/dashboard" mat-list-item><mat-icon>help</mat-icon>help</a>
+          </mat-nav-list>
+      </mat-sidenav>
+      <!-- Body -->
+      <mat-sidenav-content >
+          <div class="row text-center">
+
+              <!--main_part2 payslips column -->
+              <div class="col-lg-8" style="margin-left: 30px;">
+
+                  <!-- cards with numbers -->
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="row">
+                      <div class="card pb-2" style="height:80px;">
+                        <div class="card-body d-flex" style="padding-top: 10px; align-items: center;">
+                          <div class="card-title">Total OT hours</div>
+                          <div class="card-text">10<span style="font-size: 10px; background-color: #fff;">Hr</span></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="card" style="height:80px;">
+                        <div class="card-body d-flex" style="padding-top: 10px; align-items: center;">
+                          <div class="card-title">Total Leaves</div>
+                          <div class="card-text">10<span style="font-size: 10px; background-color: #fff;">days</span></div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="card" style="height:160px;">
+                      <div class="card-body d-block" style="padding-top: 10px;">
+                        <div class="topic card-title">If you have any Request Please Inform it !</div>
+                        <div class="details card-text d-flex">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae animi molestias, deleniti tenetur neque laboriosam soluta modi iusto odio fugiat
+                          aliquid quo sequi aspernatur quasi expedita consectetur officia blanditiis distinctio!</div>
+                        <div class="request">
+                          <button type="button" class="btn btn-color-download btn-sm text-light" (click)="redirectToRequest()">Create Request</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- payslip-table -->
+                <div class="row pt-2">
+                  <div class="col" >
+                    <div class="card">
+                      <div class="card-body" style="background-color:#fff;">
+
+                        <!-- search items with name -->
+                        <div class="search-bar d-flex" style="align-items: center;">
+                          <div class="mypayslip" style="font-weight: bold; margin-left: 26px;">My Payslips</div>
+                          <div class="search-year">
+
+                              <div class="search">
+                                <div class="search-box input-group input-group-sm">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-search"></i></span>
+                                  </div>
+                                  <input type="text" class="form-control search-input" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search">
+                                </div>
+                              </div>
+                              <div class="year">
+                                  <select [(ngModel)]="selectedYear" style="height:20px;">
+                                      <option default>2022</option>
+                                      <option>2021</option>
+                                      <option>2020</option>
+                                      <option>2019</option>
+                                </select>
+                              </div>
+
+                          </div>
+                        </div>
+
+
+                        <!-- table -->
+                        <table class="table mt-3">
+                          <thead>
+                            <tr>
+                                <th>Emp.ID</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>EPF</th>
+                                <th>Increments</th>
+                                <th>OT-Rate</th>
+                                <th>Insuarance-Claims</th>
+                                <th>Tax</th>
+
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let details of payslipDetails">
+                                <td>{{details.eid}}</td>
+                                <td>{{details.name}}</td>
+                                <td>{{details.amount}}</td>
+                                <td>{{details.epf}}</td>
+                                <td>{{details.increments}}</td>
+                                <td>{{details.otRate}}</td>
+                                <td>{{details.insuarance}}</td>
+                                <td>{{details.tax}}</td>
+
+                                <td>
+                                  <button type="button" class="btn btn-color-print btn-sm">Print</button>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn btn-color-preview text-light btn-sm">Preview</button>
+                                </td>
+                                <td>
+                                  <button type="button" class="btn btn-color-download btn-sm text-light">Download</button>
+                                </td>
+                              </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <!-- main_part3 additional_info -->
+              <div class="col-lg-3" style="width: 350px;">
+
+                <!-- calander -->
+              <div class="row">
+                <div class="col">
+                      <mat-card class="demo-inline-calendar-card" style="width:320px;">
+                        <mat-calendar [(ngModel)]="selected" class="calander_body"></mat-calendar>
+                        <div class="today_events">
+                          <h4 class="text-dark d-flex mb-0">Today Events</h4>
+                          <p class="d-flex text-sm" style="color: #788294;">10.00am - 11.00am</p>
+                          <h4 class="text-dark d-flex mb-0">Board Meeting</h4>
+                          <p class="d-flex text-sm" style="color: #788294;">10.00am - 11.00am</p>
+                        </div>
+                      </mat-card>
+
+                </div>
+              </div>
+
+              </div>
+          </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+

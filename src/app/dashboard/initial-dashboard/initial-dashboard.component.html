@@ -1,0 +1,11 @@
+
+<ng-container *ngIf="role === 'OWNER'">
+  <app-show-payslips></app-show-payslips>
+</ng-container>
+<ng-container *ngIf="role === 'ADMIN'">
+  <app-hrdashboard></app-hrdashboard>
+</ng-container>
+<ng-container *ngIf="role === 'EMPLOYEE'">
+  <app-employee-dashboard></app-employee-dashboard>
+</ng-container>
+

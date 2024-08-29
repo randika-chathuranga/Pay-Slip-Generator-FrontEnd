@@ -1,0 +1,40 @@
+@import ".././show-payslips/show-payslips.component.scss";
+
+.name_with_request{
+    justify-content: space-between;
+    background-color: $print-btn;
+    border: 1px solid #EAEAEB;
+    margin: 10px 0px;
+    padding: 10px 5px;
+}
+
+.emp_name{
+    font-weight: 600;
+    color: #333333;
+    size: 12px;
+}
+
+.emp_name, .request{
+    background-color: $print-btn;
+}
+
+.request{
+    color: #788294;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.card-title_piechart{
+    display: flex;
+    justify-content: space-between;
+    background-color: $print-btn;
+}
+
+.title_part1, .title_part2{
+    background-color: $print-btn;
+}
+
+.card-text, .card-title{
+    display: flex;
+    justify-content: center;
+}

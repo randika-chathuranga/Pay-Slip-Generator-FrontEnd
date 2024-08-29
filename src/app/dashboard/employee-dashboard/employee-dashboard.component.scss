@@ -1,0 +1,16 @@
+@import "../show-payslips/show-payslips.component.scss";
+
+.details, .request{
+    background-color: #fff;
+}
+
+.details{
+ display: inline-block;
+ font-size: 10px;
+ text-align: left;
+}
+
+.request{
+display: flex;
+justify-content: flex-end;
+}
