@@ -18,13 +18,15 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { HtppinterceptorService } from './htppinterceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     AddEmployeeComponent,
-      DashboardComponent
+      DashboardComponent,
+      NotfoundComponent
    ],
   imports: [
     BrowserModule,
