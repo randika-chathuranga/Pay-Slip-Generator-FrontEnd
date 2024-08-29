@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+  <!-- sidenavbar -->
+    <mat-sidenav-container style="height: 1000px;">
+        <mat-sidenav #sidenav opened="true" mode="side" style="width: 280px; background-color: #fff; border: none;">
+            <mat-nav-list class="pt-0" style="background-color: #fff;">
+                <a href="/dashboard" mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</a>
+                <a href="/hr-view-request" mat-list-item><mat-icon>perm_identity</mat-icon>View Request</a>
+                <a href="/hr-view-payslips" mat-list-item><mat-icon>account_balance_wallet</mat-icon>Payslips</a>
+                <a href="/generate-payslip" mat-list-item><mat-icon>extension</mat-icon>Generate Payslips</a>
+                <a href="/dashboard" mat-list-item><mat-icon>perm_identity</mat-icon>Profile</a>
+                <a href="/dashboard" mat-list-item><mat-icon>settings</mat-icon>Setting</a>
+                <a href="/dashboard" mat-list-item><mat-icon>help</mat-icon>help</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <!-- Body -->
+        <mat-sidenav-content >
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Show all requests</div>
+                            <div class="card-content" style="padding-top: 20px;">
+                                <ng-container *ngFor="let items of requestDetails">
+                                    <div class="main-header">
+                                        <div class="row">
+                                            <div class="col-lg-2">
+                                                <div class="leftside">
+                                                    <label>Request Id</label>
+                                                    <label>Employee Id</label>
+                                                    <label>Status</label>
+                                                    <label>Context</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-10" style="width: 867px;">
+                                                <div class="">{{items.reqId}}</div>
+                                                <div class="">{{items.eid}}</div>
+                                                <div class="">{{items.severityStatus}}</div>
+                                                <div class="">{{items.context}}</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- <div class="context">dcgjaf</div> -->
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>

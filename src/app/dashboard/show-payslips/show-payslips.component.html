@@ -1,0 +1,220 @@
+<app-navbar></app-navbar>
+<!-- sidenavbar -->
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav opened="true" mode="side" style="width: 280px; background-color: #fff; border: none;">
+          <mat-nav-list class="pt-0" style="background-color: #fff;">
+              <a href="/dashboard" mat-list-item><mat-icon>dashboard</mat-icon>Dashboard</a>
+              <!-- <a href="" mat-list-item><mat-icon>perm_identity</mat-icon>Employee</a> -->
+              <!-- <a href="/hr-view-payslips" mat-list-item><mat-icon>account_balance_wallet</mat-icon>Payslips</a> -->
+              <a href="/dashboard" mat-list-item><mat-icon>extension</mat-icon>Create Template</a>
+              <a href="/dashboard" mat-list-item><mat-icon>perm_identity</mat-icon>Profile</a>
+              <a href="/dashboard" mat-list-item><mat-icon>settings</mat-icon>Setting</a>
+              <a href="/dashboard" mat-list-item><mat-icon>help</mat-icon>help</a>
+          </mat-nav-list>
+      </mat-sidenav>
+      <!-- Body -->
+      <mat-sidenav-content >
+          <div class="row text-center">
+              <!-- main_part1 side_navbar -->
+              <!-- <div class="col-lg-1" style="width: 200px;">
+                <div class="d-none">
+                </div>
+              </div> -->
+
+              <!--main_part2 payslips column -->
+              <div class="col-lg-8" style="margin-left: 30px;">
+                <!-- <div class="row">
+                  <div class="my-4"><span class="d-none">space</span></div>
+                </div> -->
+
+                  <!-- cards with numbers -->
+                <div class="row">
+                  <div class="col-lg-4">
+                      <div class="card" style="height:80px;">
+                          <div class="card-body" style="padding-top: 10px;">
+                            <div class="card-title">Total Employees</div>
+                            <div class="card-text">{{count}}</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="card" style="height:80px;">
+                          <div class="card-body" style="padding-top: 10px;">
+                            <div class="card-title">Number Of Leave</div>
+                            <div class="card-text">11</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card" style="height:80px;">
+                      <div class="card-body" style="padding-top: 10px;">
+                        <div class="card-title">New Employees</div>
+                        <div class="card-text">04</div>
+                      </div>
+                  </div></div>
+                </div>
+
+                  <!-- payslip-table -->
+                <div class="row pt-4">
+                  <div class="col" >
+                    <div class="card">
+                      <div class="card-body" style="background-color:#fff;">
+
+                        <!-- search items with name -->
+                        <div class="search-bar d-flex" style="align-items: center;">
+                          <div class="mypayslip" style="font-weight: bold; margin-left: 26px;">My Payslips</div>
+                          <div class="search-year">
+
+                              <div class="search">
+                                <div class="search-box input-group input-group-sm">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-search"></i></span>
+                                  </div>
+                                  <input type="text" class="form-control search-input" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search">
+                                </div>
+                              </div>
+                              <div class="year">
+                                  <select [(ngModel)]="selectedYear" style="height:20px;">
+                                      <option default>2022</option>
+                                      <option>2021</option>
+                                      <option>2020</option>
+                                      <option>2019</option>
+                                </select>
+                              </div>
+
+                          </div>
+                        </div>
+
+
+                        <!-- table -->
+                        <table class="table mt-3">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Address</th>
+                              <th>Basic Salary</th>
+                              <th>Designation</th>
+                              <th>Department</th>
+                              <th>Branch</th>
+                              <!-- <th>Tax</th>
+                              <th>Deductions</th> -->
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let details of employeeList">
+                              <!-- <th>{{details.eid}}</th> -->
+                              <td style="color:#828A9C ; font-weight: 400">{{details.ename}}</td>
+                              <td>{{details.address}}</td>
+                              <td>{{details.basicsalry}}</td>
+                              <td>{{details.designation}}</td>
+                              <td>{{details.department}}</td>
+                              <!-- <td>{{details.nameOfBank}}</td> -->
+                              <td>{{details.branch}}</td>
+                              <td>
+                                <button type="button" class="btn btn-color-print btn-sm">Print</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-color-preview text-light btn-sm">Preview</button>
+                              </td>
+                              <td>
+                                <button type="button" class="btn btn-color-download btn-sm text-light">Download</button>
+                              </td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- new_emp_payslips -->
+                 <div class="row pt-4">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body" style="background-color:#fff;">
+                          <div class="new_employees" style="font-weight: bold;">New Employees</div>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Employee Id</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Basic Salary</th>
+                                <th>Email</th>
+                                <th>Designation</th>
+                                <th>Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let new_employees of newEmployees" style="height: 48px;">
+                                <th>{{new_employees.emp_id}}</th>
+                                <td>{{new_employees.emp_name}}</td>
+                                <td>{{new_employees.emp_address}}</td>
+                                <td>{{new_employees.emp_basic_salary}}</td>
+                                <td>{{new_employees.emp_email}}</td>
+                                <td>{{new_employees.emp_designation}}</td>
+                                <!-- Default switch -->
+                                <label class="switch">
+                                  <input type="checkbox" checked>
+                                  <span class="slider round"></span>
+                                </label>
+                                <td>
+                                  <a href="">View Profile</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- main_part3 additional_info -->
+              <div class="col-lg-3" style="width: 350px;">
+                <!-- two buttons -->
+              <div class="row" >
+                <!-- <div class="col">
+                  <button type="button" *ngIf="CreateTemplatebuttonShow" class="btn btn-create-template btn-xs">Create Template</button>
+                </div> -->
+                <!-- <div class="col">
+                  <button type="button" class="btn btn-add-employee btn-xs" >Add Employees</button>
+                </div> -->
+              </div>
+                <!-- calander -->
+              <div class="row">
+                <div class="col">
+                      <mat-card class="demo-inline-calendar-card" style="width:320px;">
+                        <mat-calendar [(ngModel)]="selected" class="calander_body"></mat-calendar>
+                        <div class="today_events">
+                          <h4 class="text-dark d-flex mb-0">Today Events</h4>
+                          <p class="d-flex text-sm" style="color: #788294;">10.00am - 11.00am</p>
+                          <h4 class="text-dark d-flex mb-0">Board Meeting</h4>
+                          <p class="d-flex text-sm" style="color: #788294;">10.00am - 11.00am</p>
+                        </div>
+                      </mat-card>
+
+                </div>
+              </div>
+
+              <!-- pie_chart -->
+              <!-- <div class="row mt-3">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+     -->
+              </div>
+          </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>

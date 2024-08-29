@@ -1,0 +1,73 @@
+@import "../show-payslips/show-payslips.component.scss";
+
+.card-title{
+    padding: 20px 0;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.card-body{
+    height: 970px;
+    background-color: #fff;
+    margin: 0px 15px;
+}
+.forminput{
+    margin-bottom: 5px;
+
+}
+
+.form-group{
+    background-color: #fff;
+    input,label{
+        background-color: #fff;
+    }
+    padding: 10px 0px;
+    input{
+        border: 1px solid black;
+    }
+}
+
+.send-btn{
+    padding: 10px 0px 10px 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    button{
+        background-color: blue;
+        width: 150px;
+    }
+}
+
+.row{
+    background-color: #fff;
+    .col{
+        background-color: #fff;
+
+    }
+}
+
+form{
+    background-color: #fff;
+    margin-left: 116px;
+}
+
+.form-outline{
+    background-color: #fff;
+}
+label, input,.form-select{
+    background-color: #fff;
+}
+
+input,.form-select{
+    border: 1px solid black;
+}
+
+.request-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+::placeholder{
+    font-size: 14px;
+}

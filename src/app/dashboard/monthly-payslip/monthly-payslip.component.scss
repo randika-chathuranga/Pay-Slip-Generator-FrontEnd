@@ -1,0 +1,128 @@
+@import "../show-payslips/show-payslips.component.scss";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.first-row, .second-row, .third-row, .fourth-row{
+    border: 4px solid #F1F6FF;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.header{
+
+    display: flex;
+    align-items: center;
+    p{
+        padding: 5px 0px 0px 20px;
+        height: 30px;
+        font-size: large;
+        background-color: #F1F6FF;
+        margin-bottom: 0;
+        align-items: center;
+
+    }
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    padding: 20px 0;
+    height: 175px;
+    margin: 0px 20px;
+}
+
+.card-title{
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+
+.first-line, .second-line,.third-line,.fourth-line,label, input{
+    background-color: #fff;
+}
+
+input{
+    border: 1px solid #DADEE7;
+    padding: 5px 30px;
+    border-radius: 4px;
+    margin: 5px 10px;
+    width: 30%;
+}
+
+label{
+    padding: 5px 30px;
+    margin: 5px 10px;
+    width: 30%;
+}
+
+
+.generate-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+        li{
+            margin-left: 5px;
+            padding: 5px;
+
+            a{
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+.drop-btn{
+    width: 178px;
+    height: 41px;
+}
+
+.topic{
+    border: 1px solid white;
+    border-radius: 7px;
+    width: 208px;
+    color: black;
+    height: 32px;
+    text-align: center;
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+
+.selectOption{
+    height: 32px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.pdfgenerate{
+    width: 200px;
+    margin-left: 455px;
+    margin-top: 50px;
+    height: 40px;
+    margin-bottom: 80px;
+}
+
+.first-line{
+    label{
+        width: 220px;
+        margin-right: 0px;
+        padding-right: 0px;
+        text-transform: capitalize;
+    }
+}
