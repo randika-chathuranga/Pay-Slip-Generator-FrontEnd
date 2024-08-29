@@ -19,14 +19,16 @@ import { HtppinterceptorService } from './htppinterceptor.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { PayslipManagementComponent } from './payslip-management/payslip-management.component';
 
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     AddEmployeeComponent,
       DashboardComponent,
-      NotfoundComponent
+      NotfoundComponent,
+      PayslipManagementComponent
    ],
   imports: [
     BrowserModule,
