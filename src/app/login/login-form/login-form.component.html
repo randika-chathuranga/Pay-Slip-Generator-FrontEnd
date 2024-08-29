@@ -1,0 +1,40 @@
+<app-welcome-background></app-welcome-background>
+<section class="form blue-background" style="background-color:#5D8BD8;" >
+    <div class="row" style="height: 714px">
+        <div class="col-md-0 col-lg-6 first-div"></div>
+        <div class="col-md-12 col-lg-6">
+            <div class="card bg-white main_card">
+                <div class="card-body">
+                    <div class="x-pay" style="margin-top: 34px; margin-bottom: 15px;"><img src="../../../assets/images/x-pay.svg" alt="" style="display: flex; padding-left:206px"></div>
+
+                    <div class="card-title text-center text-primary">Login</div>
+                    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                        <div>
+                            <input type="email" class="form-control mb-4 p-3 d-grid col-6 mx-auto"  id="ownerEmail" name="ownerEmail" placeholder="Email Address" autocomplete="new-password" formControlName="email" [(ngModel)]="owner.email">
+                            <span class="validations_email" style="color: red;" *ngIf="email && email.invalid && email.touched">Email input field is not valid</span>
+                        </div>
+                        <div>
+                            <input [type]="changetype?'password':'text'" class="form-control mb-1 p-3 d-grid col-6 mx-auto"  id="ownerPassword" name="ownerPassword" placeholder="Password" required="" autocomplete="new-password" formControlName="password" [(ngModel)]="owner.password">
+                            <span class="eye" (click)="viewpass()"><i [ngClass]="visible?'bi bi-eye-slash':'bi bi-eye'" style="cursor: pointer" ></i></span>
+                            <span class="validations_password" style="color: red; position: relative; margin-left: 75px; bottom: 24px" *ngIf="password && password.invalid && password.touched">Password input field is required</span>
+                        </div>
+                        <div class="forgot_password">
+                            <!-- <a href="" (click)="isForgotpasswordLink =! isForgotpasswordLink">forgot password</a> -->
+                            <a href="forgot-password">forgot password</a>
+                        </div>
+                        <div class="text-center d-grid col-6 mx-auto login-button">
+                            <button class="login-btn btn btn-primary text-center">Login</button>
+                        </div>
+                        <div class="warning">
+                            <p class="warning-text">This page is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
