@@ -1,0 +1,238 @@
+@import "../../../styles.scss";
+@import "../forgot-password/forgot-password.component.scss";
+.login-btn{
+    margin-top: 50px;
+    @include login();
+}
+
+.main_card{
+    height: 600px;
+    width: 548px;
+    @include main_card_additional();
+}
+
+.card-title{
+    @include card_title();
+}
+
+.form-control{
+    width: 368px;
+    height: 56px;
+    border-radius: 4px;
+}
+
+.warning p{
+    @include warning();
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.forgot_password_link a{
+    float: right;
+    margin-right: 58px;
+    text-decoration: revert;
+}
+
+.validations_email{
+    position: relative;
+    bottom: 20px;
+    margin-left: 73px;
+}
+
+.validations_password{
+    position: relative;
+    margin-left: 103px;
+}
+
+.eye{
+    bottom: 43px;
+    position: relative;
+    margin-left: 438px;
+}
+
+.form-control{
+    width: 400px;
+}
+
+.login-button{
+    width: 400px;
+    margin-top: 48px;
+}
+
+.card-title{
+    margin-bottom: 48px;
+}
+
+.warning{
+    width: 400px;
+    margin-left: 67px;
+}
+.warning-text{
+    width: 400px;
+
+}
+
+
+@media screen and (max-width:425px) {
+    .main_card{
+        height: 400px;
+        width: 300px;
+        @include main_card_additional();
+       margin-left: 0px;
+       margin-top: 80px;
+    }
+
+    .first-div{
+        display: none;
+    }
+
+    img{
+        margin-left: -100px;
+        height: 31px;
+
+    }
+
+    input{
+        #ownerEmail{
+            width: 239px;
+
+        }
+    }
+
+    .blue-background{
+        height: 896px;
+    }
+
+    .form-control{
+        width: 239px;
+        height: 34px;
+
+    }
+    ::placeholder{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+
+    .forgot_password{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 31px;
+
+    }
+
+    .login-button{
+        width: 239px;
+        margin-top: 20px;
+    }
+    .login-btn{
+        height: 33px;
+        font-size: 14px;
+        margin-top: 0px;
+
+    }
+    .card-title{
+        margin-bottom: 20px;
+    }
+
+    .warning{
+        width: 239px;
+        margin-right: 0px;
+        margin-left: 29px;
+    }
+
+    .warning-text{
+        width: 239px;
+        font-size: 8px;
+        width: 239px;
+
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .card-title{
+        font-size: 18px;
+    }
+    .main_card{
+        height: 534px;
+        width: 413px;
+        @include main_card_additional();
+        margin-inline: auto;
+    }
+
+    .first-div{
+        display: none;
+    }
+
+    img{
+        margin-left: -61px;
+        height: 44px;
+
+    }
+
+    input{
+        #ownerEmail{
+            width: 239px;
+
+        }
+    }
+
+    form{
+        margin-top: 45px;
+    }
+    .blue-background{
+        height: 1024px;
+    }
+
+    .form-control{
+        width: 295px;
+        height: 43px;
+
+    }
+    ::placeholder{
+        font-size: 12px;
+        padding-left: 12px;
+
+    }
+
+    .forgot_password{
+        font-size: 12px;
+        margin-left: 0px;
+        margin-right: 59px;
+
+    }
+
+    .login-button{
+        width: 295px;
+        margin-top: 69px;
+    }
+    .login-btn{
+        height: 35px;
+        font-size: 14px;
+        margin-top: 0px;
+
+    }
+    .card-title{
+        margin-bottom: 20px;
+    }
+
+    .warning{
+        width: 295px;
+        margin-right: 0px;
+        margin-left: 48px;
+        line-height: 9px;
+    }
+
+    .warning-text{
+        width: 295px;
+        font-size: 6px;
+    }
+
+    .eye{
+        bottom: 33px;
+        position: relative;
+        margin-left: 321px;
+    }
+
+}

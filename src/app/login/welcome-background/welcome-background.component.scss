@@ -1,0 +1,223 @@
+
+header{
+  width: 100%;
+}
+
+.col1_inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  gap: 30px;
+  position: absolute;
+  width: 731px;
+  height: 585px;
+  left: 30px;
+  top: 100px;
+}
+
+.title, .desc, .login_text{
+  font-family: 'Inter';
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.title{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+  gap: 10px;
+  width: 321px;
+  height: 84px;
+  border: 3px solid #FFFFFF;
+
+}
+.desc{
+  width: 531px;
+  height: 200px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+
+.login_sm_btn_outline{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 50px;
+  gap: 10px;
+  width: 114px;
+  height: 41px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.login_text a{
+  width: 55px;
+  height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* background poligons */
+.poly1{
+  position: absolute;
+  width: 131px;
+  height: 122px;
+  left: 76px;
+  top: 455px;
+}
+
+.poly2{
+  position: absolute;
+  width: 73.98px;
+  height: 109.54px;
+  left: 474.16px;
+  top: 383.12px;
+  transform: rotate(-10deg);
+}
+
+.poly3{
+  position: absolute;
+  width: 54px;
+  height: 43px;
+  left: 474.37px;
+  top: 196.38px;
+  transform: rotate(10deg);
+}
+
+.poly4{
+  position: absolute;
+  width: 131px;
+  height: 100px;
+  left: 614px;
+  top: 147.35px;
+}
+
+.poly5{
+  position: absolute;
+  width: 54px;
+  height: 43px;
+  left: 564.5px;
+  top: 582px;
+}
+
+.poly6{
+  position: absolute;
+  width: 31px;
+  height: 43px;
+  left: 277.5px;
+  top: 449px;
+}
+
+.poly7{
+  position: absolute;
+  width: 54px;
+  height: 43px;
+  left: 986.5px;
+  top: 733px;
+  transform: rotate(10deg);
+}
+
+.poly8{
+  position: absolute;
+  width: 54px;
+  height: 43px;
+  left: 1459.41px;
+  top: 673.15px;
+  transform: rotate(-20deg);
+}
+
+.poly9{
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  left: 1420.46px;
+  top: 51px;
+  transform: rotate(10deg);
+}
+
+.group1{
+  position: absolute;
+  width: 47px;
+  height: 55px;
+  left: 205px;
+  top: 180px;
+}
+
+.group2{
+  position: absolute;
+  width: 47px;
+  height: 55px;
+  left: 615px;
+  top: 351px;
+}
+
+.group3{
+  position: absolute;
+  width: 47px;
+  height: 55px;
+  left: 1007px;
+  top: 2px;
+}
+
+
+
+/* @media screen and(max-width:1370px) {
+  .col1_inner{
+      width: 630px;
+      display: none;
+  }
+} */
+
+@media only screen and (max-width: 1220px) {
+  .col1 {
+   display: none;
+ }
+}
+
+@media only screen and (max-width: 800px) {
+  .img01{
+      margin-left: 230px;
+  }
+  }
+
+@media only screen and (max-width: 425px) {
+  img{
+      display: none;
+  }
+
+  header, .col1{
+      max-width: 425px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header, .col1{
+      max-width: 768px;
+  }
+
+  img{
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  header, .col1{
+      max-width: 1440px;
+  }
+
+  .poly9, .poly7, .poly8{
+      display: none;
+  }
+}
+
